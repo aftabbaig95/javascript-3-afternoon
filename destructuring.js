@@ -21,7 +21,10 @@ var carDetails = {
   Use object destructuring to save the property values from the object carDetails into new variables. 
 */
 
-//Code Here
+var {color} = carDetails 
+var {make} = carDetails 
+var {model} = carDetails 
+var {year} = carDetails
 
 
 
@@ -34,7 +37,9 @@ var carDetails = {
 */
 
 function greeting( obj ) {
-  //Code Here
+  var {firstName} = obj 
+  var {lastName} = obj
+  var {title} = obj
   
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
@@ -53,7 +58,19 @@ function greeting( obj ) {
   Sum up the values and return the total number.
 */
 
-//Code Here
+function totalPopulation (obj){
+  utah: 1
+  california: 2
+  texas: 3 
+  arizona: 4
+  var {utah} = obj
+  var {california}= obj 
+  var {texas} = obj
+  var {arizona} = obj
+  return utah + california + texas + arizona; 
+
+}; 
+totalPopulation(obj); 
 
 
 
@@ -66,8 +83,20 @@ function greeting( obj ) {
   Use object destructuring to save the property values to new variables. 
   Push these new variables to an array and return the array. 
 */
+var obj = {
+  carb: 'x',
+  fat: 'y', 
+  protein: 'z'};
+  
 
-//Code Here
+ 
+
+function ingredients (obj){
+  var {carb, fat , protein}= obj
+  let arr = [];
+  arr.push(carb, fat, protein)
+  return arr;
+}; 
 
 
 
@@ -84,8 +113,19 @@ function greeting( obj ) {
   The object properties will be named first, second, and third and their values will be numbers.
   Find the smallest number of the three and return that number.
 */
+var obj1= {
+  first: 1,
+  second: 2, 
+  third: 3
+};
+var {first, second , third} = obj1
 
-//Code Here
+print({first, second, third})
+function largeNumbers ({first, second, third}){
+  if(first < second && first < third){return first}
+  else if (second < first && second < third){return second}
+  else if (third < first && third < second){return third}
+};
 
 
 
@@ -96,7 +136,18 @@ function greeting( obj ) {
   The object properties will be named a, b, and c and their values will be arrays of numbers.
   Find the longest array and return that array.
 */
-
-//Code Here
+// var obj = {
+//   a: [1, 2, 3],
+//   b: [4 ,5 ,6],
+//   c: [7, 8, 9,10]
+// };
+var {a} = obj
+var {b} = obj 
+var {c} = obj 
+function numberGroups ({a,b,c}){
+  if(a.length > b.length && a.length > c.length){return a}
+  else if (b.length > a.length && b.length > c.length){return b}
+  else if (c.length > a.length && c.length > b.length){return c}
+}; 
 
 
